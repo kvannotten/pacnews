@@ -1,0 +1,12 @@
+[Trigger]
+Operation = Install
+Operation = Upgrade
+Operation = Remove
+Type = Package
+Target = *
+
+[Action]
+Description = Checking arch news
+When = PreTransaction
+Exec = /home/kristof/go/bin/pacnews check
+AbortOnFail
