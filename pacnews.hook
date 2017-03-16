@@ -8,5 +8,5 @@ Target = *
 [Action]
 Description = Checking arch news
 When = PreTransaction
-Exec = /home/kristof/go/bin/pacnews check
+Exec = /usr/bin/pacnews check
 AbortOnFail
