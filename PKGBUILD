@@ -1,6 +1,6 @@
 # Maintainer: Kristof Vannotten <kristof@vannotten.be>
 pkgname=pacnews
-pkgver=20170316.2_f74a11c
+pkgver=20170316.3_f92b099
 pkgrel=1
 pkgdesc="Arch news reader"
 arch=('i686' 'x86_64')
@@ -23,7 +23,7 @@ md5sums=(
 	'SKIP'
 	'1f188b5fd15ebeeb5d7bbd3229e4e333'
 	'97e6eb7ff7a657632971ac37135754b8'
-	'1d8027b32f5159b71dfb2ffd198df19f'
+	'91441dfd38ef957aeaba9dc492ceb9b5'
 )
 
 backup=(

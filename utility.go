@@ -30,7 +30,6 @@ func checkNews(c *cli.Context) error {
 			v := b.Get([]byte(item.GUID))
 			if v == nil {
 				new = true
-				fmt.Println(item.GUID)
 			}
 		}
 		return nil
