@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"log"
 	"os"
+	"os/user"
 	"path"
 	"time"
 
@@ -15,6 +16,14 @@ import (
 var DB *bolt.DB
 
 func main() {
+	usr, err := user.Current()
+	if err != nil {
+		log.Fatal(err)
+	}
+	if usr.Username != "root" {
+		log.Fatal("Need to run as root")
+	}
+
 	app := cli.NewApp()
 	app.Name = "pacnews"
 	app.Usage = "Read the arch news"
