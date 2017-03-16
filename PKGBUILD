@@ -1,6 +1,6 @@
 # Maintainer: Kristof Vannotten <kristof@vannotten.be>
 pkgname=pacnews
-pkgver=20170316.3_f92b099
+pkgver=20170316.7_8c3c502
 pkgrel=1
 pkgdesc="Arch news reader"
 arch=('i686' 'x86_64')
@@ -14,16 +14,10 @@ makedepends=(
 
 source=(
 	"pacnews::git://github.com/kvannotten/pacnews#branch=${BRANCH:-master}"
-	"pacnews.go"
-	"pacnews.hook"
-	"utility.go"
 )
 
 md5sums=(
 	'SKIP'
-	'1f188b5fd15ebeeb5d7bbd3229e4e333'
-	'97e6eb7ff7a657632971ac37135754b8'
-	'134d9ee629d950581b3e824a7c570724'
 )
 
 backup=(
@@ -71,5 +65,5 @@ package() {
 	find "$srcdir/.go/bin/" -type f -executable | while read filename; do
 		install -DT "$filename" "$pkgdir/usr/bin/$(basename $filename)"
 	done
-	install -DT -m0755 "$srcdir/pacnews.hook" "$pkgdir/etc/pacman.d/hooks/pacnews.hook"
+	install -DT -m0755 "$srcdir/.go/src/$pkgname/pacnews.hook" "$pkgdir/etc/pacman.d/hooks/pacnews.hook"
 }
