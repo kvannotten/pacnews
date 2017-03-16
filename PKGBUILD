@@ -23,7 +23,7 @@ md5sums=(
 	'SKIP'
 	'1f188b5fd15ebeeb5d7bbd3229e4e333'
 	'97e6eb7ff7a657632971ac37135754b8'
-	'91441dfd38ef957aeaba9dc492ceb9b5'
+	'134d9ee629d950581b3e824a7c570724'
 )
 
 backup=(

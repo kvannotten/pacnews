@@ -18,6 +18,10 @@ func feedItems() []*gofeed.Item {
 		return []*gofeed.Item{}
 	}
 
+	for i, j := 0, len(feed.Items)-1; i < j; i, j = i+1, j-1 {
+		feed.Items[i], feed.Items[j] = feed.Items[j], feed.Items[i]
+	}
+
 	return feed.Items
 }
 
